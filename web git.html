@@ -1,0 +1,41 @@
+<html>
+<head>
+      <meta http-equiv="Content-type" content="text/html"; charset="UTF-8"></meta>
+<script language = "Javascript">
+
+</script>
+</head>
+<body align="center">
+   <h1>Ðăng ký thông tin</h1>
+   <form name="myForm" >
+  <p>  Name: <input type="text" name="name"><br></p>
+   <p> Email: <input type="text" name="email"><br></p>
+<p>  Password: <input type="text" name="pass"><br></p>
+<input type="button" onclick="myfunction()" value="Create a account">
+</form>
+<p id="demo"></p>
+<script>
+    function myfunction(){
+        var x = document.forms["myForm"]["name"].value;
+        var y = document.forms["myForm"]["email"].value;
+        var z = document.forms["myForm"]["pass"].value;
+        if (x=="") {
+           alert("Name này đã được dùng");
+           myForm.name.focus();
+           return false;
+        } else if(y==""){
+               alert("Email không đúng");
+               myForm.email.focus();
+               return false;
+               }
+               else if(z==""){
+               alert("Password không đúng"); 
+               myForm.pass.focus();   
+               return false;                
+         } else    
+            alert("đăng ký thành công");
+        
+    }
+</script>
+</body>
+</html>
